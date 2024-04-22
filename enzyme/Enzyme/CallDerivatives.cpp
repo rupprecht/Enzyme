@@ -2255,7 +2255,7 @@ bool AdjointGenerator::handleKnownCallDerivatives(
       return true;
   }
 
-  if (funcName == "printf" || funcName == "puts" ||
+  if (funcName == "printf" || funcName == "puts" || funcName == "fprintf" ||
       startsWith(funcName, "_ZN3std2io5stdio6_print") ||
       startsWith(funcName, "_ZN4core3fmt")) {
     if (Mode == DerivativeMode::ReverseModeGradient) {
